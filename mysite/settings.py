@@ -6,8 +6,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOTDIR = os.path.dirname(__file__)
 
 # Media folder
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# For DEBUG = True use this:
+# MEDIA_URL = 'media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# For DEBUG = False use this:
+MEDIA_URL = 'http://media.escolacervejeira.com.br/'
+MEDIA_ROOT = '/home/escolacervejeira/www/media'
 ADMIN_MEDIA_PREFIX = '/admin_media/'
 
 
@@ -19,8 +25,9 @@ SECRET_KEY = 'z)@fj-%h-a(wv4*wn2p(^6_^yl9avhzu1p=uj)bxpvl__ty5e-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+PREPEND_WWW = True
 
-ALLOWED_HOSTS = ['escolacervejeira.com.br']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','escolacervejeira.com.br','www.escolacervejeira.com.br', 'media.escolacervejeira.com.br']
 
 
 # Application definition
@@ -80,6 +87,17 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'jordy',
+#         'USER': 'jordy',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
 #     }
 # }
 
