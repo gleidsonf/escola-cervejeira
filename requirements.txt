@@ -2,7 +2,7 @@ cffi==1.11.0
 cryptography==1.7.1
 Django==1.11.4
 django-ckeditor==5.3.0
-django-geoposition==0.3.1
+django-geoposition==0.3.0
 django-js-asset==0.1.1
 django-multiupload==0.5.2
 dnspython==1.15.0
